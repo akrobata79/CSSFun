@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JSON-P</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function twitterCallback(tweets) {
+				alert("Latest Tweet: " + tweets[0].text);
+			}
+		</script>
+		<script src="http://twitter.com/status/user_timeline/whitehouse.json?callback=twitterCallback" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,193 @@
+
+<!--http://oli.jp/2009/html5-structure1/-->
+<!--http://coding.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>boot</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-lightbox.css" rel="stylesheet" rel="stylesheet" type="text/css">
+
+    <style>
+
+        body{
+            /*background-color: #000;*/
+        }
+
+        #outer{
+            position: relative;
+            width: auto;
+            top: 100px;
+            background-color: #369;
+        }
+
+        #first{
+            background-color: #ccf;
+            float: left;
+            width: 50%;
+            height: 300px;
+        }
+
+        #second{
+
+            background-color: #fcc;
+            float: left;
+            width: 50%;
+            height: 300px;
+        }
+
+
+    </style>
+
+
+    <!--<link href="css/bootstrapmin.css" rel="stylesheet" type="text/css">-->
+
+</head>
+
+<a data-toggle="lightbox" href="#demoLightbox">Open Lightbox</a>
+
+
+<div class="lightbox fade" id="demoLightbox" style="display: none;">
+
+    <div class='lightbox-content'>
+        <!--<iframe  src="http://www.youtube.com/embed/M0jmSsQ5ptw" frameborder="0" allowfullscreen></iframe>-->
+    </div>
+
+</div>
+
+<div class="container-fluid">
+
+    <div id="outer">
+
+        <a href="#">
+            <div id="first">
+
+                <div class="row-fluid">
+
+                    <div class="span6 square1">
+                        <p>aaaa</p>
+                    </div>
+
+                    <div class="span6 square2">
+                        </p>bsdsd</p>
+                    </div>
+
+                </div>
+
+                <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+            </div>
+        </a>
+
+        <a href="#">
+            <div id="second">
+                <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+            </div>
+        </a>
+
+
+    </div>
+
+
+
+    <!--<div class="row-fluid">-->
+
+    <!--<div class="span6 square1">-->
+    <!--aaaa-->
+    <!--</div>-->
+
+    <!--<div class="span6 square2">-->
+    <!--bsdsd-->
+    <!--</div>-->
+
+    <!--</div>-->
+
+</div>
+
+<script src="js/underscore.js"></script>
+<script src="js/backbone.js"></script>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-lightbox.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+//        $("#first").css('display', 'none');
+
+
+        var vid1 = "http://www.youtube.com/embed/M0jmSsQ5ptw";
+        var vid2 = "http://www.youtube.com/embed/M0jmSsQ5ptw";
+
+//
+
+
+//        var obj = $("#demoLightbox").$element;
+
+
+//        console.log("obj",obj);
+
+//        obj.on("yo", function(msg) {
+//            console.log("msg",msg);
+//
+//        });
+
+//        var object = {};
+
+
+
+
+//
+//
+//
+//        object.on("alert", function(msg) {
+//            alert("Triggered " + msg);
+//        });
+
+//        var yoObj = {}
+
+//        $("#demoLightbox").lightbox({reference:yoObj});
+
+
+
+
+        //cdnjs.cloudflare.com/ajax/libs/backbone.eventbinder/0.1.0/backbone.eventbinder.min.js
+
+        $('#demoLightbox').bind('show', function() {
+
+
+
+
+            $("#demoLightbox").find('.lightbox-content')
+
+            var holder = $("#demoLightbox").find('.lightbox-content');
+
+            if(holder.length) {
+                console.log("child exist",holder.length, holder);
+            }
+
+            var template = _.template(' <iframe  src="http://www.youtube.com/embed/M0jmSsQ5ptw" frameborder="0" allowfullscreen></iframe> ');
+            holder.append(template);
+            console.log("sh");
+
+        });
+
+    });
+
+</script>
+
+
+
+
+<body>
+
+</body>
+</html>

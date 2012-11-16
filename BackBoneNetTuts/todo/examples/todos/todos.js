@@ -150,7 +150,7 @@ $(function(){
 
   });
 
-  // The Application
+  // Todo App
   // ---------------
 
   // Our overall **AppView** is the top-level piece of UI.

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <style>
+
+        body{
+            font: 14px Arial;
+            margin: 0px;
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        a, a:visited {
+            color: #00f;
+        }
+
+        h1.fpo_text {
+            color: #aaa; font-family: Times; font-size: 24px;
+        }
+
+        p.fpo_text {
+            color: #aaa; font-family: Times; font-size: 16px;
+
+        }
+
+        .sp h2 {
+            font-size: 1.15em; margin: 0 0 .5em 0;
+        }
+
+        .sp p {
+            font-size: 1em; margin: 0 0 1em 0;
+        }
+
+        .sp {
+            width: 325px; position: relative; margin: 0 0 10px 25px; float: right;
+        }
+
+        .sp .tabs span {
+            display: inline-block;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 8px 12px 8px 12px;
+            margin: 0px;
+            background-color: #fff;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .sp .tabs span:first-child {
+            padding-left: 15px;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            -webkit-border-top-left-radius: 12px;
+            -moz-border-radius-topleft: 12px;
+            border-top-left-radius: 12px;
+        }
+
+        .sp .tabs span:last-child {
+            padding-right: 15px;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            -webkit-border-top-right-radius: 12px;
+            -moz-border-radius-topright: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .sp .tabs span.selected {
+            color: #999;
+            border-bottom:  1px solid #fff;
+        }
+
+        .sp .panel_container {
+            position: relative;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            overflow: hidden;
+            z-index:100;
+            margin-top: -1px;
+        }
+
+        .sp .panel_container .panel .panel_content {
+            padding: 15px;
+        }
+
+        .sp .panel_container .panels {position:absolute; top: 0;}
+        .sp .panel_container .panel {position:absolute; height:400px;}
+
+        .togglator {
+            background-color: #FF0000;
+            color: red;
+        }
+
+
+            /*if panel set stop position absolute container doesnt know its height*/
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script>
+
+        var panelWidth = 0;
+
+        $(document).ready(function() {
+
+            window.panelWidth = $('.sp').width();
+            $('.panel_container .panel').each(function(index){
+
+                //left position since this is absolute positioned
+                $(this).css({ 'width':window.panelWidth+'px', 'left':(index*window.panelWidth)+'px' });
+                $('.sp .panels').css('width',(index+1)*window.panelWidth+'px');
+
+            })
+
+            $('.sp .tabs span').each(function(){
+                console.log("1", $(this));
+
+                $(this).on('click',function(){
+
+                    changePanels( $(this).index() );
+                    $(this).addClass('togglator');
+
+                })
+
+            });
+
+        });
+
+
+        function changePanels(newIndex) {
+
+            var newPanelPosition = (window.panelWidth*newIndex)* -1;
+            var newPanelHeight = $('.sp .panel:nth-child('+(newIndex+1)+')').find('.panel_content').height() + 15;
+
+//            console.log("newPanelHeight",newPanelHeight,$('.sp panel:nth-child('+(newIndex+1)+')'));
+
+            $('.sp .panels').animate({left:newPanelPosition},1000);
+            $('.sp .panel_container').animate({height:newPanelHeight},1000);
+
+//            console.log("",$('.sp panel:nth-child('+(newIndex+1)+')').find('panel_content'));
+//                console.log(">",$('.sp first-child'));
+        }
+
+
+
+
+
+    </script>
+
+
+
+</head>
+
+<div class="sp">
+
+    <div class="tabs"><span>sjsjjs</span><span>sjsjjs</span><span>sjsjjs</span></div>
+
+    <div class="panel_container">
+
+
+        <div class="panels">
+
+            <div class="panel">
+                <div class="panel_content">
+                    <h2>bla bla</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere aliquam nunc, eu ultrices velit ultrices quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec sapien vel ipsum sagittis vehicula non vel purus. Mauris sit amet lectus at mauris malesuada mollis vitae facilisis massa. Etiam non lacinia nisl. Sed leo odio, tincidunt quis vulputate non, pulvinar pellentesque lacus. Duis sollicitudin commodo metus a porttitor. Pellentesque interdum erat dignissim elit vehicula mattis. Nulla eu augue sem, id cursus urna. Sed eget felis et ipsum scelerisque dictum. Sed imperdiet ultricies justo in vehicula. Duis sem odio, fermentum ornare dignissim ut, convallis nec ligula. Sed nec mi velit, ac bibendum erat. Phasellus at tortor at dolor varius tempor. Morbi suscipit tortor semper urna sodales vestibulum.</p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel_content">
+                    <h2>bla bla</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere aliquam nunc, eu ultrices velit ultrices quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec sapien vel ipsum sagittis vehicula non vel purus. Mauris sit amet lectus at mauris malesuada mollis vitae facilisis massa. Etiam non lacinia nisl. Sed leo odio, tincidunt quis vulputate non, pulvinar pellentesque lacus. Duis sollicitudin </p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel_content">
+                    <h2>bla bla</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere aliquam nunc, eu ultrices velit ultrices quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec sapien vel ipsum sagittis vehicula non vel purus. Mauris sit amet lectus at mauris malesuada mollis vitae facilisis massa. Etiam non lacinia nisl. Sed leo odio, tincidunt quis vulputate non, pulvinar pellentesque lacus. Duis sollicitudin commodo metus a porttitor. Pellentesque interdum erat dignissim elit vehicula mattis. Nulla eu augue sem, id cursus urna. Sed eget felis et ipsum scelerisque dictum. Sed imperdiet ultricies justo in vehicula. Duis sem odio, fermentum ornare dignissim ut, convallis nec ligula. Sed nec mi velit, ac bibendum erat. Phasellus at tortor at dolor varius tempor. Morbi suscipit tortor semper urna sodales vestibulum.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<body>
+
+</body>
+</html>

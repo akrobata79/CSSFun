@@ -22,46 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="backbone-localstorage.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo/examples/backbone-localstorage.js">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo_A/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/todo/examples/todos/index.html">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo_A/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="33" selection-start="583" selection-end="583" vertical-scroll-proportion="0.23504274">
+            <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.020661157">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todos.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo/examples/todos/todos.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="17" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todos.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo/examples/todos/todos.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="39" selection-start="2370" selection-end="2370" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="destroy.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo/examples/todos/destroy.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -75,15 +50,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/demo_A/index.html" />
-        <option value="$PROJECT_DIR$/demo_B/index.html" />
-        <option value="$PROJECT_DIR$/demo_A/js/app.js" />
-        <option value="$PROJECT_DIR$/jQueryT/index1.html" />
         <option value="$PROJECT_DIR$/demo_A_accordion/js/app.js" />
         <option value="$PROJECT_DIR$/demo_A_accordion/css/screen.css" />
         <option value="$PROJECT_DIR$/demo_A_accordion/index.html" />
         <option value="$PROJECT_DIR$/todo/examples/todos/index.html" />
         <option value="$PROJECT_DIR$/todo/examples/todos/todos.js" />
+        <option value="$PROJECT_DIR$/demo_A/js/app.js" />
+        <option value="$PROJECT_DIR$/todo2/examples/todos/todos.js" />
+        <option value="$PROJECT_DIR$/todo3/index.html" />
+        <option value="$PROJECT_DIR$/todo3/js/jsooon.json" />
+        <option value="$PROJECT_DIR$/todo2/examples/todos/index.html" />
+        <option value="$PROJECT_DIR$/todo3/js/script.js" />
+        <option value="$PROJECT_DIR$/todo3/readme.md" />
+        <option value="$PROJECT_DIR$/phpTests/hello.php" />
+        <option value="$PROJECT_DIR$/phpTests/ch15/people.json" />
+        <option value="$PROJECT_DIR$/phpTests/ch15/ajax.js" />
+        <option value="$PROJECT_DIR$/phpTests/ch15/index.php" />
       </list>
     </option>
   </component>
@@ -171,16 +153,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -198,59 +170,15 @@
               <option name="myItemId" value="BackBoneNetTuts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="todo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackBoneNetTuts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackBoneNetTuts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="todo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackBoneNetTuts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackBoneNetTuts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="todo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="todos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackBoneNetTuts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackBoneNetTuts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -260,7 +188,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.completion" />
+    <property name="options.lastSelected" value="editing.templates" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -317,8 +245,8 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23940678" sideWeight="0.5059761" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23940678" sideWeight="0.48472777" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23940678" sideWeight="0.51660025" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23940678" sideWeight="0.4741036" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -389,78 +317,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo_A/js/json2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_A/css/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="720" selection-end="720" vertical-scroll-proportion="0.54298645" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_B/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="35" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_B/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="108" selection-end="108" vertical-scroll-proportion="-3.125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_A/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="77" selection-end="77" vertical-scroll-proportion="0.08708273" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_A/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.8168044" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_A_accordion/css/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="881" selection-end="882" vertical-scroll-proportion="0.21037868" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_A_accordion/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="24" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.053295933" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jQueryT/index_orig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="12" selection-start="1443" selection-end="1503" vertical-scroll-proportion="0.11312217" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jQueryT/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="288" selection-end="288" vertical-scroll-proportion="0.17416546" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_A_accordion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="272" selection-end="2069" vertical-scroll-proportion="0.2394775" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo/examples/backbone-localstorage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo/examples/todos/todos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="17" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo/examples/todos/todos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="39" selection-start="2370" selection-end="2370" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todo/examples/todos/destroy.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -468,7 +324,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/todo/examples/todos/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="33" selection-start="583" selection-end="583" vertical-scroll-proportion="0.23504274">
+        <state line="13" column="12" selection-start="198" selection-end="198" vertical-scroll-proportion="0.021367522" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo3/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="31" selection-end="144" vertical-scroll-proportion="0.1446281" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="84" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.58635706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo2/examples/todos/todos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="246" column="0" selection-start="7121" selection-end="7124" vertical-scroll-proportion="0.85" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo2/examples/todos/todos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="19" selection-start="199" selection-end="199" vertical-scroll-proportion="-0.4752066" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo2/examples/todos/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="2" selection-start="615" selection-end="615" vertical-scroll-proportion="0.05982906" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo3/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.18934081" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpTests/ch15/json-p.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="46" selection-start="143" selection-end="143" vertical-scroll-proportion="0.14957266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpTests/ch15/people.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="54" selection-start="48" selection-end="55" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpTests/ch15/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="260" selection-end="260" vertical-scroll-proportion="0.18595041">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpTests/ch15/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="25" selection-start="129" selection-end="129" vertical-scroll-proportion="0.10330579">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpTests/ch15/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="59" selection-start="950" selection-end="950" vertical-scroll-proportion="0.8264463">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpTests/hello.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="19" selection-start="138" selection-end="138" vertical-scroll-proportion="0.1446281">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo_A/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo_A/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.020661157">
           <folding />
         </state>
       </provider>

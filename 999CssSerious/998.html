@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="boot/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style>
+
+        .bloc {
+
+            line-height: 100px;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            position: relative;
+            background: #014464;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            border: 1px solid #368DBE;
+            border-top: 1px solid #c3d6df;
+            text-shadow: 1px 1px 1px black;
+            -moz-box-shadow: 0 1px 3px black;
+            -webkit-box-shadow: 0 1px 3px black;
+            box-shadow: 0 1px 3px black;
+            float: left;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+
+        <div class="span1" id="padContainer">
+        </div>
+
+    </div>
+</div>
+
+
+<script src="boot/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
+
+<script id="template1" type="text/x-handlebars-template">
+
+    <div class='bloc'>
+        <h1>{{one}}</h1>
+        <h2>{{two}}</h2>
+        <a href="#" class="btn btn-primary btn-large">Learn more</a>
+    </div>
+
+</script>
+
+<script>
+
+    (function () {
+
+        var data = {one:"oneD", two:"twoD"}
+        var comp = Handlebars.compile($('#template1').html())
+        var elo = comp(data)
+        console.log("elo",elo);
+
+        $('.container-fluid').find('#padContainer').append(elo).append(elo).append(elo);
+
+        $('.bloc').css('height','300px')
+
+    })();
+
+</script>
+
+</body>
+</html>
