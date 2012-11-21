@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Google Maps JavaScript API v3 Example: Street View Controls</title>
+    <link href="/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+        function initialize() {
+
+            var directionsDisplay;
+            var directionsService = new google.maps.DirectionsService();
+            var map;
+
+            function initialize() {
+                directionsDisplay = new google.maps.DirectionsRenderer();
+                var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+                var mapOptions = {
+                    zoom:7,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    center: chicago
+                }
+                map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+                directionsDisplay.setMap(map);
+            }
+
+            function calcRoute() {
+                var start = document.getElementById("start").value;
+                var end = document.getElementById("end").value;
+                var request = {
+                    origin:start,
+                    destination:end,
+                    travelMode: google.maps.TravelMode.DRIVING
+                };
+                directionsService.route(request, function(result, status) {
+                    if (status == google.maps.DirectionsStatus.OK) {
+                        directionsDisplay.setDirections(result);
+                    }
+                });
+            }
+
+//            var fenway = new google.maps.LatLng(42.345573,-71.098326);
+//
+//            // Note: constructed panorama objects have visible: true
+//            // set by default.
+//            var panoOptions = {
+//                position: fenway,
+//                addressControlOptions: {
+//                    position: google.maps.ControlPosition.BOTTOM
+//                },
+//                linksControl: false,
+//                panControl: false,
+//                zoomControlOptions: {
+//                    style: google.maps.ZoomControlStyle.SMALL
+//                },
+//                enableCloseButton: false
+//            };
+//
+//            var panorama = new google.maps.StreetViewPanorama(
+//                    document.getElementById('pano'), panoOptions);
+//
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+
+<div>
+    <strong>Start: </strong>
+    <select id="start">
+        <option value="penn station, new york, ny">Penn Station</option>
+        <option value="grand central station, new york, ny">Grand Central Station</option>
+        <option value="625 8th Avenue New York NY 10018">Port Authority Bus Terminal</option>
+        <option value="staten island ferry terminal, new york, ny">Staten Island Ferry Terminal</option>
+        <option value="101 E 125th Street, New York, NY">Harlem - 125th St Station</option>
+    </select>
+    <strong>End: </strong>
+    <select id="end" onchange="calcRoute();">
+        <option value="260 Broadway New York NY 10007">City Hall</option>
+        <option value="W 49th St & 5th Ave, New York, NY 10020">Rockefeller Center</option>
+        <option value="moma, New York, NY">MOMA</option>
+        <option value="350 5th Ave, New York, NY, 10118">Empire State Building</option>
+        <option value="253 West 125th Street, New York, NY">Apollo Theatre</option>
+        <option value="1 Wall St, New York, NY">Wall St</option>
+    </select>
+    <div>
+
+<div id="pano" style="width: 400px; height: 300px"></div>
+</body>
+</html>

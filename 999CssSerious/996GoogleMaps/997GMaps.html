@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+
+            /*.labels {*/
+            /*color: red;*/
+            /*background-color: white;*/
+            /*font-family: "Lucida Grande", "Arial", sans-serif;*/
+            /*font-size: 10px;*/
+            /*font-weight: bold;*/
+            /*text-align: center;*/
+            /*width: 60px;*/
+            /*border: 2px solid black;*/
+            /*white-space: nowrap;*/
+            /*}*/
+
+    </style>
+
+</head>
+<body>
+
+<div id="pano" style="top:30px; width:100%; height: 400px;"></div>
+<div id="map_canvas" style="top:30px; width:auto; height: 400px;"></div>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
+
+<script id="template1" type="text/x-handlebars-template">
+    <h1>{{one}}</h1>
+    <h2>{{two}}</h2>
+</script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+
+        Array.prototype.insert = function (index, item) {
+            this.splice(index, 0, item);
+        };
+
+        var directionsDisplay;
+        var directionsService = new google.maps.DirectionsService();
+        var map;
+        var panorama;
+        var markersArray = [];
+
+        var panoramaOptions = {
+            pov: {
+                heading: 0,
+                pitch: 0,
+                zoom: 1
+            }
+        };
+
+        var start;
+        var end;
+
+        var request = {
+            origin:start,
+            destination:end,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+
+        var path;
+
+        initialize();
+
+        function initialize() {
+            directionsDisplay = new google.maps.DirectionsRenderer();
+
+            map = new google.maps.Map(document.getElementById("map_canvas"),
+                    {mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                        center: new google.maps.LatLng(41.850033, -87.6500523),
+                        zoom:11
+
+                    });
+
+            google.maps.event.addListener(map, "click", function(event) {
+
+//                placeMarker(event.latLng);
+
+
+                if(!start && !end) {
+
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map
+                    });
+
+
+                }
+
+            });
+
+
+//            directionsDisplay.setMap(map);
+
+//            calcRoute();
+        }
+
+        function placeMarker(location) {
+            // first remove all markers if there are any
+//            deleteOverlays();
+
+
+
+            // add marker in markers array
+//            markersArray.push(marker);
+
+            //map.setCenter(location);
+        }
+
+
+
+        function calcRoute() {
+            directionsService.route(request, function(result, status) {
+
+                if (status == google.maps.DirectionsStatus.OK) {
+                    path = result.routes[0].overview_path;
+                    directionsDisplay.setDirections(result);
+                    calculatePoints2()
+                }
+            });
+        }
+
+
+        var newPath =[];
+
+
+        function calculatePoints2() {
+
+            for (var j = 0; j < path.length; j++) {
+
+                var t = path[j];
+
+//            newPath.push(new google.maps.LatLng(t.Za, t.$a))
+
+                if(path[j+1]) {
+
+                    var pointA=path[j]
+                    var pointB=path[j+1]
+                    var distAB = distanceTwoPoints(pointA,pointB)
+                    var setDist = 0.0001;
+
+                    var howManyInbetweeners = distAB/setDist;
+
+//                                    newPath.push(pointA)
+
+                    for (var i = 0; i < (howManyInbetweeners).toFixed(); i++) {
+
+                        var yu = i*setDist;
+
+                        //  console.log("at leg:",j, "   inner leg:", i, yu);
+
+                        var res1=pointB.Za-pointA.Za;
+                        var res2=pointB.$a-pointA.$a;
+
+                        var me = 1/(distAB/(setDist*i))
+
+                        var finres = new google.maps.LatLng(pointA.Za+(res1*me),pointA.$a+(res2*me))
+
+
+                        if(newPath.length<1000) {
+                            newPath.push(finres)
+
+                        } else {
+                            break;
+                        }
+
+                    }
+
+                    //
+
+
+//                console.log("dist",dist,spaces);
+                }
+
+            }
+
+            for (var i = 0; i < newPath.length; i++) {
+                var t = newPath[i];
+
+                var leg = new google.maps.Marker({icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+i+'|FF0000|000000'});
+                leg.setMap(map);
+                leg.setPosition(t);
+
+
+            }
+
+            var i=0
+
+            panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('pano'), panoramaOptions);
+            panorama.setPov({
+                heading: 0,
+                pitch: 0,
+                zoom: 1
+            })
+
+//            setInterval(loop,1000)
+
+            function loop() {
+
+                i++;
+                panorama.setPosition(new google.maps.LatLng(newPath[i].Za,newPath[i].$a))
+
+
+            }
+
+        }
+
+
+
+        function distanceTwoPoints(pA, pB) {
+
+            var x1=pA.Za
+            var y1=pA.$a
+
+            var x2=pB.Za
+            var y2=pB.$a
+
+            var dx = x1-x2;
+            var dy= y1-y2;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+
+
+
+
+
+
+    });
+
+    //            var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+    //            var mapOptions = {
+    //                zoom:7,
+    //                mapTypeId: google.maps.MapTypeId.ROADMAP,
+    //                center: chicago
+    //            }
+
+
+
+
+    // Note: constructed panorama objects have visible: true
+    // set by default.
+
+
+
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="default.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.2.6.pack.js" type="text/javascript"></script>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAACezl5OES8dMDmq_DvDePXxR1DJfR2IAi0TSZmrrsgSOYoGgsxBTxN5RDergBZIkIAfmbeWXNM3zdtg"
+            type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function() { // when the document is ready to be manipulated.
+
+            if (GBrowserIsCompatible()) { // if the browser is compatible with Google Map's
+
+                var map = document.getElementById("myMap"); // Get div element
+                
+                var m = new GMap2(map); // new instance of the GMap2 class and pass in our div location.
+
+                m.setCenter(new GLatLng(36.158887, -86.782056), 20); // pass in latitude, longitude, and zoom level.
+
+//                  m.openInfoWindow(m.getCenter(), document.createTextNode("This is our business.")); // displays the text
+                m.setMapType(G_SATELLITE_MAP); // sets the default mode. G_NORMAL_MAP, G_HYBRID_MAP
+
+                var c = new GMapTypeControl(); // switch map modes
+//                  m.addControl(c);
+
+                //m.addControl(new GLargeMapControl()); // creates the zoom feature
+            }
+            else {
+                alert("Upgrade your browser, man!");
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="myMap"></div>
+</body>
+</html>
